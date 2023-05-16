@@ -92,3 +92,12 @@ $success: #7952b3;
 // @import "_tarkov-background.scss";
 // @import "_waves.scss";
 @import "_defaults.scss";
+
+.bg-header {
+    background-color: #707b7c;
+
+    a h1 {
+        color: #FFC300;
+    }
+    
+}
