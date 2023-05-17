@@ -7,11 +7,11 @@
     }
 }
 
-@include font('Bender', '../css/fonts/Bender');
-@include font('Bender-Black', '../css/fonts/Bender-Black');
-@include font('Bender-Bold', '../css/fonts/Bender-Bold');
-@include font('Bender-Italic', '../css/fonts/Bender-Italic');
-@include font('Bender-Light', '../css/fonts/Bender-Light');
+@include font('Bender', '../assets/fonts/Bender');
+@include font('Bender-Black', '../assets/fonts/Bender-Black');
+@include font('Bender-Bold', '../assets/fonts/Bender-Bold');
+@include font('Bender-Italic', '../assets/fonts/Bender-Italic');
+@include font('Bender-Light', '../assets/fonts/Bender-Light');
 
 body {
     background-color: #405a73;
