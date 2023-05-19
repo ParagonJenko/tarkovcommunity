@@ -5,6 +5,7 @@ node_modules/
 css/
 .env
 js/api-key.js
+<<<<<<< HEAD
 =======
 scss/
 >>>>>>> 807f732 (FIX: Updating .gitignore)
@@ -20,3 +21,5 @@ js/api-key.js
 =======
 js/api-key.js
 >>>>>>> b651e7c (FIX: Removed API key.)
+=======
+>>>>>>> 9b811d2 (FIX: Updating .gitignore)
