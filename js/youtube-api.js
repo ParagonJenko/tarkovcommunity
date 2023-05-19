@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // BSG YT ID: UC5QGploHhl9_XaxDiHZKamg
 // TFG YT ID: UCA5LtT7kdG1Cts9DeSLdZ5w
 // BSG MOST RECENT PLAYLIST: UULF5QGploHhl9_XaxDiHZKamg
@@ -89,3 +90,8 @@ window.onload = function() {
         }
     }
 };
+=======
+// https://developers.google.com/youtube/iframe_api_reference?authuser=2
+
+// https://developers.google.com/youtube/documentation?authuser=2
+>>>>>>> fd44bba (FIX: Adding back CSS)
