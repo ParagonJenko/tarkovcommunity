@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 node_modules/
 scss/
 .env
 js/api-key.js
+=======
+node_modules/
+>>>>>>> 6140b88 (Updating .gitignore to re-add CSS)
