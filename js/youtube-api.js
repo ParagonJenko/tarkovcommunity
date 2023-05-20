@@ -34,7 +34,6 @@ function getVideos(amountofVideos) {
         var youtubeData = getJSONData("https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults="+amountofVideos+"&playlistId=UULF5QGploHhl9_XaxDiHZKamg&key="+apiKey);
         var videoinfo = JSON.parse(youtubeData);
         var youtubevideos = videoinfo.items;
-        var video;
         
         for (var i = 0; i < youtubevideos.length - 1; i++) {
             var videoid = youtubevideos[i].snippet.resourceId.videoId;
@@ -44,7 +43,7 @@ function getVideos(amountofVideos) {
                 videothumbnail = youtubevideos[i].snippet.thumbnails.maxres.url;
             }
             else {
-                videothumbnail = youtubevideos[i].snippet.thumbnails.high.url;
+                videothumbnail = youtubevideos[i].snippet.thumbnails.medium.url;
             }
 
             addToObject(i, videoid, videothumbnail);
