@@ -66,3 +66,23 @@ function addToObject(i, videoid, videothumbnail) {
         videos[i].thumbnail = videothumbnail;
     }
 }
+
+window.onload = function() {
+
+    var youtubeURL = 'https://youtube.com/';
+    var embedURL = 'embed/';
+    var videoURL = 'watch?v=';
+    var URL;
+    
+     for(var i = 0; i < videos.length - 1; i++) {
+        if(i === 0){
+            URL = youtubeURL+embedURL+videos[i].id;      
+            document.getElementById("video"+i).src = URL;
+        }
+        else  {
+            URL = youtubeURL+videoURL+videos[i].id; 
+            document.getElementById("video"+i).src = videos[i].thumbnail;
+            document.getElementById("video"+i+"link").href = URL;
+        }
+    }
+};

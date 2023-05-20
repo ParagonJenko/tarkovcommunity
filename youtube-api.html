@@ -40,25 +40,39 @@
      -->
 
 
-     <!-- <div class="container-fluid"> -->
+    <div class="container-fluid">
 
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
     <!-- <div id="player" class="ratio ratio-16x9"></div> -->
 
-    <div class="col-md-4">
-        <img id="video0" src="https://placekitten.com/1920/1080" alt="" class="img-fluid rounded ">
+    
+
+
+    
+    <div class="ratio ratio-16x9">
+        <iframe 
+            id="video0" type="text/html"
+            src="" frameborder="0"
+            allowfullscreen>
+        </iframe>
     </div>
 
      <div class="row">
 
         <div class="col-md-4">
-            <img id="video1" src="https://placekitten.com/1920/1080" alt="" class="img-fluid rounded ">
+            <a id="video1link" href="">
+            <img id="video1" src="https://placekitten.com/1280/720" alt="" class="img-fluid rounded">
+            </a>
         </div>
         <div class="col-md-4">
-            <img id="video2" src="https://placekitten.com/1920/1080" alt="" class="img-fluid rounded ">
+            <a id="video2link" href="">
+            <img id="video2" src="https://placekitten.com/1280/720" alt="" class="img-fluid rounded">
+            </a>
         </div>
         <div class="col-md-4">
-            <img id="video3" src="https://placekitten.com/1920/1080" alt="" class="img-fluid rounded ">
+            <a id="video3link" href="">
+                <img id="video3" src="https://placekitten.com/1280/720" alt="" class="img-fluid rounded">
+            </a>
         </div>
 
      </div>
@@ -68,9 +82,12 @@
 
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="js/youtube-api.js"></script>
-    <div id="videos"></div>
+
     <script type="text/javascript">
-        showVideoListChannel("AIzaSyCn-MDrO-PXDQZh4uh1zfYADw-OqETCC2k");
+        getVideos(4);
+
+        console.log(videos);
+      
     </script>
 
 
