@@ -11,4 +11,8 @@ scss/
 scss/
 .env
 js/api-key.js
+<<<<<<< HEAD
 >>>>>>> c11c225 (FEATURE: Adding .env to gitignore)
+=======
+js/api-key.js
+>>>>>>> b651e7c (FIX: Removed API key.)
