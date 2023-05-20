@@ -2,7 +2,11 @@
 // TFG YT ID: UCA5LtT7kdG1Cts9DeSLdZ5w
 // BSG MOST RECENT PLAYLIST: UULF5QGploHhl9_XaxDiHZKamg
 
-// Script Source: https://stackoverflow.com/questions/30081301/getting-all-videos-of-a-channel-using-youtube-api/33767046#33767046
+// https://developers.google.com/youtube/v3/docs/playlistItems/list?apix_params=%7B%22part%22%3A%5B%22snippet%22%5D%2C%22maxResults%22%3A5%2C%22playlistId%22%3A%22UULF5QGploHhl9_XaxDiHZKamg%22%7D&apix=true#usage
+
+// Script Source: https://stackoverflow.com/questions/30081301/getting-all-youtubevideos-of-a-channel-using-youtube-api/33767046#33767046
+
+var apiKey = 'AIzaSyCn-MDrO-PXDQZh4uh1zfYADw-OqETCC2k';
 
 function getJSONData(yourUrl) {
     var Httpreq = new XMLHttpRequest();
@@ -16,48 +20,49 @@ function getJSONData(yourUrl) {
 }
 
 /*
-function showVideoListChannel(string apikey)
+function getVideos()
 
 API_KEY = Supplied by Google
-
+amountOfVideos = How many we returned from YouTube
 */
-function showVideoListChannel(apikey) {
-    try {
-        var vid = getJSONData("https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=5&playlistId=UULF5QGploHhl9_XaxDiHZKamg&key="+apikey);
-        var videoinfo = JSON.parse(vid);
-        var videos = videoinfo.items;
-        for (var i = 0; i < videos.length - 1; i++) {
-            var videoid = videos[i].id.videoId;
-            var videotitle = videos[i].snippet.title;
-            var videothumbnail = videos[i].snippet.thumbnails;
 
-            console.log(videothumbnail);
+var videos = [];
+
+function getVideos(amountofVideos) {
+    try {
+        amountofVideos++;
+        var youtubeData = getJSONData("https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults="+amountofVideos+"&playlistId=UULF5QGploHhl9_XaxDiHZKamg&key="+apiKey);
+        var videoinfo = JSON.parse(youtubeData);
+        var youtubevideos = videoinfo.items;
+        var video;
+        
+        for (var i = 0; i < youtubevideos.length - 1; i++) {
+            var videoid = youtubevideos[i].snippet.resourceId.videoId;
+            var videothumbnail = youtubevideos[i].snippet.thumbnails;
 
             if(videothumbnail.maxres) {
-                videothumbnail = videos[i].snippet.thumbnails.maxres.url;
+                videothumbnail = youtubevideos[i].snippet.thumbnails.maxres.url;
             }
             else {
-                videothumbnail = videos[i].snippet.thumbnails.high.url;
+                videothumbnail = youtubevideos[i].snippet.thumbnails.high.url;
             }
-            // if(typeof videos[i].snippet.thumbnails.high.url != 'undefined') {
-            //     videothumbnail = videos[i].snippet.thumbnails.maxres.url;
-            // }
-            // else {
-            //     videothumbnail = videos[i].snippet.thumbnails.high.url;
-            // }
 
-            
-            // if(videothumbnail === null) {
-            //     videothumbnail = videos[i].snippet.thumbnails.high.url;
-            // }
-
-            console.log(videothumbnail);
-            console.log(i);
-            
-            document.getElementById('video'+i).src = videothumbnail;
+            addToObject(i, videoid, videothumbnail);
         }
         
     } catch (ex) {
         alert(ex.message);
+    }
+}
+
+function addToObject(i, videoid, videothumbnail) {
+
+    if(typeof videos[i] === 'undefined') {
+        newObject = {id: videoid, thumbnail: videothumbnail};
+        videos.push(newObject);
+    }
+    else {      
+        videos[i].id = videoid;
+        videos[i].thumbnail = videothumbnail;
     }
 }
