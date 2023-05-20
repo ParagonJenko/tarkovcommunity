@@ -19,10 +19,8 @@
 
 <body class="">
 
-    
-    <!-- <img src="assets/eft-logo.png" class=""> -->
-
-    <img src="assets/eft-logo.png" class="col-12">
+    <!-- <img src="assets/eft-logo.png" class="col-12"> -->
+    <!-- Potentially a map, with events/goontracker -->
 
     <!-- Content -->
     <div class="container-fluid">
@@ -53,18 +51,42 @@
                                 <i class="bi-youtube"></i>
                                 BSG YouTube
                         </a>
-                        <a class="float-end float-md-none ps-md-2 my-auto link-h1" href="#bsg-youtube" onclick="document.getElementsByClassName('youtube')[0].classList.toggle('hide');"><i class="bi bi-arrow-down"></i></a>
+                        <a class="float-end float-md-none ps-md-2 my-auto link-h1" href="#bsg-youtube" onclick="document.getElementById('youtubeSection').classList.toggle('hide');"><i class="bi bi-arrow-down"></i></a>
                     </h1>
                 </div>
         
                 <!-- Column -->
-                <div class="youtube ratio ratio-16x9 hide">
-                    <iframe src="https://www.youtube-nocookie.com/embed?listType=playlist&list=UU5QGploHhl9_XaxDiHZKamg" allowfullscreen
-                        loading="lazy">
-                    </iframe>
+               
+                <div id="youtubeSection">
+                    <div class="ratio ratio-16x9">
+                        <embed id="video0" src="https://youtube.com/embed/j-Jx66R-0s8" frameborder="0" allowfullscreen>
+                        </embed>
+                    </div>
+                    
+                    <div class="row">
+                    
+                        <div class="col-md-4 p-5">
+                            <a id="video1link" href="https://youtube.com/watch?v=fewBii6NV1g">
+                                <img id="video1" src="https://i.ytimg.com/vi/fewBii6NV1g/hqdefault.jpg" alt="" class="img-fluid rounded  mx-auto d-block">
+                            </a>
+                        </div>
+                        <div class="col-md-4 p-5">
+                            <a id="video2link" href="https://youtube.com/watch?v=YWfYmOf7NGQ">
+                                <img id="video2" src="https://i.ytimg.com/vi/YWfYmOf7NGQ/maxresdefault.jpg" alt="" class="img-fluid rounded mx-auto d-block">
+                            </a>
+                        </div>
+                        <div class="col-md-4 p-5">
+                            <a id="video3link" href="https://youtube.com/watch?v=6OqFPigDYOw">
+                                <img id="video3" src="https://i.ytimg.com/vi/6OqFPigDYOw/maxresdefault.jpg" alt="" class="img-fluid rounded mx-auto d-block">
+                            </a>
+                        </div>
+                    
+                    </div>
                 </div>
-                
+
             </div>
+
+            <!--  -->
         
         </div>
 
@@ -81,13 +103,11 @@
                         </h1>
                     </a>
                 </div>
-                <!-- Column -->
+                
                 <a class="twitter-timeline" data-height="500" data-theme="dark"
                     href="https://twitter.com/bstategames?ref_src=twsrc%5Etfw">Tweets by bstategames</a>
                 <script defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
-
-            <!--  -->
 
             <div class="col-12 col-md-6" id="bsg-tarkov">
                 <div class="bg-header rounded p-3 mb-2 mt-4">
@@ -98,7 +118,7 @@
                         </h1>
                     </a>
                 </div>
-                <!-- Column -->
+                
                 <a class="twitter-timeline" data-height="500" data-theme="dark"
                     href="https://twitter.com/tarkov?ref_src=twsrc%5Etfw">Tweets by bstategames</a>
                 <script defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -113,6 +133,15 @@
     <div class="wave"></div> -->
 
     <script type="module" src="js/main.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="js/youtube-api.js"></script>
+    
+    <script type="text/javascript">
+        // getVideos(5);
+
+        console.log(videos);
+
+    </script>
 </body>
 
 </html>
