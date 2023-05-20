@@ -1,8 +1,14 @@
 node_modules/
 <<<<<<< HEAD
+<<<<<<< HEAD
 css/
 .env
 js/api-key.js
 =======
 scss/
 >>>>>>> 807f732 (FIX: Updating .gitignore)
+=======
+scss/
+.env
+js/api-key.js
+>>>>>>> c11c225 (FEATURE: Adding .env to gitignore)
