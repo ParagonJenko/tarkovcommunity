@@ -25,10 +25,16 @@ amountOfVideos = How many we returned from YouTube
 */
 
 var videos = [];
+var apiKey;
 
 function getVideos(amountofVideos) {
     try {
         amountofVideos++;
+
+        if(apiKey) {
+            apiKey = 'AIzaSyCn-MDrO-PXDQZh4uh1zfYADw-OqETCC2k';
+        }
+
         var youtubeData = getJSONData("https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults="+amountofVideos+"&playlistId=UULF5QGploHhl9_XaxDiHZKamg&key="+apiKey);
         var videoinfo = JSON.parse(youtubeData);
         var youtubevideos = videoinfo.items;

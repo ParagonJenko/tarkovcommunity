@@ -6,9 +6,13 @@ Hosted on Netlify
 
 ## Goals:
 
-- Utilise APIs to embed Twitter + YouTube - potentially a grid format.
 - Improve dropdown UX.
 - Add analytics
+
+## Challenges
+
+- Twitter API for Free only allows write-only use cases, therefore wouldn't be useful for the purpose I'd like to use this for.
+- This is primarily front-end work, and storing secrets such as
 
 ## Extra Epics
 
