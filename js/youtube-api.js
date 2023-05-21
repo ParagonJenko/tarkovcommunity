@@ -33,12 +33,18 @@ function getVideos(amountofVideos) {
         if(typeof apiKey == "undefined") {
             apiKey = 'AIzaSyCn-MDrO-PXDQZh4uh1zfYADw-OqETCC2k';
             // Error with no direction to avoid searching for the API key
-            console.log("Undefined-ERR01");
+            console.log("Production key");
         }
 
-        var youtubeData = getJSONData("https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults="+amountofVideos+"&playlistId=UULF5QGploHhl9_XaxDiHZKamg&key="+apiKey);
+        var youtubeData = getJSONData("https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults="+amountofVideos+"&playlistId=UULF5QGploHhl9_XaxDiHZKamg&key="+apiKey);     
         var videoinfo = JSON.parse(youtubeData);
+
         var youtubevideos = videoinfo.items;
+
+        if(typeof youtubevideos == "undefined") {
+            console.log("No data returned by API");
+            return;
+        }
         
         for (var i = 0; i < youtubevideos.length - 1; i++) {
             var videoid = youtubevideos[i].snippet.resourceId.videoId;
