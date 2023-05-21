@@ -1,25 +1,4 @@
 node_modules/
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-css/
 .env
 js/api-key.js
-<<<<<<< HEAD
-=======
-scss/
->>>>>>> 807f732 (FIX: Updating .gitignore)
-=======
-scss/
-=======
 css/
->>>>>>> 8b7e89e (Updating .gitignore to re-add CSS)
-.env
-js/api-key.js
-<<<<<<< HEAD
->>>>>>> c11c225 (FEATURE: Adding .env to gitignore)
-=======
-js/api-key.js
->>>>>>> b651e7c (FIX: Removed API key.)
-=======
->>>>>>> 9b811d2 (FIX: Updating .gitignore)
