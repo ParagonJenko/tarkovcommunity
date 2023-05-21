@@ -31,7 +31,7 @@ function getVideos(amountofVideos) {
     try {
         amountofVideos++;
 
-        if(apiKey) {
+        if(typeof apiKey == undefined) {
             apiKey = 'AIzaSyCn-MDrO-PXDQZh4uh1zfYADw-OqETCC2k';
         }
 
