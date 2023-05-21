@@ -84,13 +84,8 @@ $success: #7952b3;
 // Custom styles
 //
 
-@import "icon-list";
-@import "colors";
-
-
-// Backgrounds
-// @import "_tarkov-background.scss";
-// @import "_waves.scss";
+@import "_icon-list";
+@import "_colors";
 @import "_defaults.scss";
 
 .bg-header {
