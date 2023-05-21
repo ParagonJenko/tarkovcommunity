@@ -17,3 +17,4 @@ Hosted on Netlify
 ## Extra Epics
 
 - When the YouTube thumbnails are clicked, update the iframe and play that.
+- Gracefully check for the API returning data, before returning placeholder data and a notice.
