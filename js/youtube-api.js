@@ -32,7 +32,8 @@ function getVideos(amountofVideos) {
 
         if(typeof apiKey == "undefined") {
             apiKey = 'AIzaSyCn-MDrO-PXDQZh4uh1zfYADw-OqETCC2k';
-            console.log("API Key Undefined");
+            // Error with no direction to avoid searching for the API key
+            console.log("Undefined-ERR01");
         }
 
         var youtubeData = getJSONData("https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults="+amountofVideos+"&playlistId=UULF5QGploHhl9_XaxDiHZKamg&key="+apiKey);
