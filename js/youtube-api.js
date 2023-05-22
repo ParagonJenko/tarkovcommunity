@@ -6,16 +6,7 @@
 
 // Script Source: https://stackoverflow.com/questions/30081301/getting-all-youtubevideos-of-a-channel-using-youtube-api/33767046#33767046
 
-function getJSONData(yourUrl) {
-    var Httpreq = new XMLHttpRequest();
-    try {
-        Httpreq.open("GET", yourUrl, false);
-        Httpreq.send(null);
-    } catch (ex) {
-        alert(ex.message);
-    }
-    return Httpreq.responseText;
-}
+
 
 /*
 function getVideos()
