@@ -19,7 +19,23 @@
 
 <body class="">
 
-    <img src="assets/tarkovmap.png" class="w-100">
+    <img src="assets/tarkovmap.png" class="w-100" usemap="#image-map">
+
+    <map name="image-map">
+        <area target="" alt="The Lab" title="The Lab" href="#labs" coords="724,284,937,227" shape="rect">
+        <area target="" alt="Streets of Tarkov" title="Streets of Tarkov" href="#streetsoftarkov" coords="1494,298,1172,242" shape="rect">
+        <area target="" alt="Interchange" title="Interchange" href="#interchange" coords="1050,371,1269,424" shape="rect">
+        <area target="" alt="Customs" title="Customs" href="#customs" coords="979,449,1141,506" shape="rect">
+        <area target="" alt="Woods" title="Woods" href="#woods" coords="708,422,840,476" shape="rect">
+        <area target="" alt="Factory" title="Factory" href="#factory" coords="796,561,949,616" shape="rect">
+        <area target="" alt="Town" title="Town" href="#town" coords="465,490,622,561" shape="rect">
+        <area target="" alt="Suburbs" title="Suburbs" href="#suburbs" coords="1012,276,1169,343" shape="rect">
+        <area target="" alt="Reserve" title="Reserve" href="#reserve" coords="583,657,746,710" shape="rect">
+        <area target="" alt="Lighthouse" title="Lighthouse" href="#lighthouse" coords="555,804,773,861" shape="rect">
+        <area target="" alt="Shoreline" title="Shoreline" href="#shoreline" coords="691,924,879,973" shape="rect">
+        <area target="" alt="Terminal" title="Terminal" href="#terminal" coords="906,888,1077,967" shape="rect">
+    </map>
+
     <!-- Potentially a map, with events/goontracker -->
     <!-- <img src="assets/tarkovmap_adobe_express.svg" alt="" class="w-100"> -->
 
@@ -152,9 +168,14 @@
     <script src="js/api-key.js"></script>
     <script src="js/curl-request.js"></script>
     <script src="js/youtube-api.js"></script>
+
+    <!-- using `script` -->
+    <script src="https://unpkg.com/image-map/dist/image-map.js"></script>
     
     <script type="text/javascript">
         getVideos(5);
+
+        ImageMap('img[usemap]', 200);
     </script>
 </body>
 </html>
