@@ -6,16 +6,7 @@
 
 // Script Source: https://stackoverflow.com/questions/30081301/getting-all-youtubevideos-of-a-channel-using-youtube-api/33767046#33767046
 
-function getJSONData(yourUrl) {
-    var Httpreq = new XMLHttpRequest();
-    try {
-        Httpreq.open("GET", yourUrl, false);
-        Httpreq.send(null);
-    } catch (ex) {
-        alert(ex.message);
-    }
-    return Httpreq.responseText;
-}
+
 
 /*
 function getVideos()
@@ -47,9 +38,12 @@ function getVideos(amountofVideos) {
         }
         
         for (var i = 0; i < youtubevideos.length - 1; i++) {
+
+            // Set easier to remember and call variables from the JSON data.
             var videoid = youtubevideos[i].snippet.resourceId.videoId;
             var videothumbnail = youtubevideos[i].snippet.thumbnails;
 
+            // If we have a max resolution thumbnail, display that otherwise use medium as this is the only other default non-black bar.
             if(videothumbnail.maxres) {
                 videothumbnail = youtubevideos[i].snippet.thumbnails.maxres.url;
             }
@@ -57,7 +51,7 @@ function getVideos(amountofVideos) {
                 videothumbnail = youtubevideos[i].snippet.thumbnails.medium.url;
             }
 
-            addToObject(i, videoid, videothumbnail);
+            addToArray(i, videoid, videothumbnail);
         }
         
     } catch (ex) {
@@ -65,8 +59,9 @@ function getVideos(amountofVideos) {
     }
 }
 
-function addToObject(i, videoid, videothumbnail) {
+function addToArray(i, videoid, videothumbnail) {
 
+    // Add new object to the array or update.
     if(typeof videos[i] === 'undefined') {
         newObject = {id: videoid, thumbnail: videothumbnail};
         videos.push(newObject);
@@ -77,6 +72,7 @@ function addToObject(i, videoid, videothumbnail) {
     }
 }
 
+// On load set the URLs.
 window.onload = function() {
 
     var youtubeURL = 'https://youtube.com/';
