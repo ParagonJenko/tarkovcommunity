@@ -23,254 +23,97 @@
 
 
  -->
-
 <body class="">
 
-    <div class="position-absolute top-0 end-0" id="top-right-banner">
+    <!-- Nav -->
+    <nav class="d-flex flex-md-row flex-column justify-content-md-evenly p-3">
+        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas" 
+        onclick="updateOffCanvas('Factory')">Factory</a>
+        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas"
+        onclick="updateOffCanvas('Woods')">Woods</a>
+        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas"
+        onclick="updateOffCanvas('Customs')">Customs</a>
+        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas"
+        onclick="updateOffCanvas('Interchange')">Interchange</a>
+        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas"
+        onclick="updateOffCanvas('Reserve')">Reserve</a>
+        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas"
+        onclick="updateOffCanvas('Shoreline')">Shoreline</a>
+        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas"
+        onclick="updateOffCanvas('The Lab')">The Lab</a>
+        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas"
+        onclick="updateOffCanvas('Lighthouse')">Lighthouse</a>
+        <a class="btn btn-secondary disabled flex-shrink-1 m-2"
+        onclick="updateOffCanvas('Suburbs')">Suburbs</a>
+        <a class="btn btn-secondary disabled flex-shrink-1 m-2"
+        onclick="updateOffCanvas('Town')">Town</a>
+        <a class="btn btn-secondary disabled flex-shrink-1 m-2"
+        onclick="updateOffCanvas('Terminal')">Terminal</a>
+    </nav>
+    <!-- / Nav -->
+
+
+    <!--  -->
+    <div class="offcanvas offcanvas-end text-bg-dark" data-bs-scroll="true" tabindex="-1"
+        id="offcanvas" aria-labelledby="offcanvasLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <h3 class="offcanvas-title" id="offcanvasLabel">TITLE </h3>
+        </div>
+        <div class="offcanvas-body">
+            
+        </div>
+    </div>
+    <!--  -->
+
+   
+
+    <div class="d-flex d-flex justify-content-between">
+        <!-- YouTube -->
+        <div id="youtubeSection" class="p-3 flex-fill w-75">
         
+            <div class="ratio ratio-16x9">
+                <embed id="video0" src="https://youtube.com/embed/j-Jx66R-0s8" frameborder="0" allowfullscreen></embed>
+            </div>
+        
+            <div class="row">
+                <div class="col-md-4 p-md-5 py-2">
+                    <a id="video1link" href="https://youtube.com/watch?v=fewBii6NV1g" class="">
+                        <img id="video1" src="https://i.ytimg.com/vi/fewBii6NV1g/mqdefault.jpg" alt=""
+                            class="w-100 img-fluid rounded mx-auto d-block">
+                    </a>
+                </div>
+                <div class="col-md-4 p-md-5 py-2">
+                    <a id="video2link" href="https://youtube.com/watch?v=YWfYmOf7NGQ">
+                        <img id="video2" src="https://i.ytimg.com/vi/YWfYmOf7NGQ/maxresdefault.jpg" alt=""
+                            class="w-100 img-fluid rounded mx-auto d-block">
+                    </a>
+                </div>
+                <div class="col-md-4 p-md-5 py-2">
+                    <a id="video3link" href="https://www.youtube.com/watch?v=BgIgKcqPd4k">
+                        <img id="video3" src="http://placekitten.com/1920/1080" alt=""
+                            class="w-100 img-fluid rounded mx-auto d-block">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- / Youtube -->
+
+        <div class="vr m-3"></div>
+
+        <a href="https://mapgenie.io/tarkov" class="btn btn-outline-info flex-shrink-1 align-self-center">MapGenie - Tarkov Maps</a>
+        
+
     </div>
 
-    <!-- <button onclick="displayNotifications('top-right-banner', 'info', '<strong>Hello there!</strong> This is where we\'ll be sharing any news or events!')">Add Stuff</button> -->
-
-    <!-- <script type="text/javascript">
-        displayNotifications('top-right-banner');
-    </script> -->
-
-    <img src="assets/tarkovmap.png" class="w-100 " usemap="#image-map">
-
-    <map name="image-map">
-        <area target="" alt="The Lab" title="The Lab" href="#thelab" coords="724,284,937,227" shape="rect"
-        onCLick="displayNotifications('top-right-banner', 'info', 
-        `This map is <a href='https://escapefromtarkov.fandom.com/wiki/The_Lab' class='alert-link'>The Lab</a>
-        
-        <hr>
-        
-        There are no events on this map.`)"
-        >
-        <area target="" alt="Streets of Tarkov" title="Streets of Tarkov" href="#streetsoftarkov" coords="1494,298,1172,242" shape="rect"
-        onCLick="displayNotifications('top-right-banner', 'info', 
-        `This map is <a href='https://escapefromtarkov.fandom.com/wiki/Streets_of_Tarkov' class='alert-link'>Streets of Tarkov</a>
-        
-        <hr>
-        
-        There are no events on this map.`)"
-        >
-        <area target="" alt="Interchange" title="Interchange" href="#interchange" coords="1050,371,1269,424" shape="rect"
-        onCLick="displayNotifications('top-right-banner', 'info', 
-        `This map is <a href='https://escapefromtarkov.fandom.com/wiki/Interchange' class='alert-link'>Interchange</a>
-        
-        <hr>
-        
-        There are no events on this map.`)"
-        >
-        <area target="" alt="Customs" title="Customs" href="#customs" coords="979,449,1141,506" shape="rect"
-        onCLick="displayNotifications('top-right-banner', 'info', 
-        `This map is <a href='https://escapefromtarkov.fandom.com/wiki/Customs' class='alert-link'>Customs</a>
-        
-        <hr>
-        
-        There are no events on this map.`)"
-        >
-        <area target="" alt="Woods" title="Woods" href="#woods" coords="708,422,840,476" shape="rect"
-        onCLick="displayNotifications('top-right-banner', 'info', 
-        `This map is <a href='https://escapefromtarkov.fandom.com/wiki/Woods' class='alert-link'>Woods</a>
-        
-        <hr>
-        
-        There are no events on this map.`)"
-        >
-        <area target="" alt="Factory" title="Factory" href="#factory" coords="796,561,949,616" shape="rect"
-        onCLick="displayNotifications('top-right-banner', 'info', 
-        `This map is <a href='https://escapefromtarkov.fandom.com/wiki/Factory' class='alert-link'>Factory</a>
-        
-        <hr>
-        
-        There are no events on this map.`)"
-        >
-        <area target="" alt="Town" title="Town" href="#town" coords="465,490,622,561" shape="rect"
-        onCLick="displayNotifications('top-right-banner', 'info', 
-        `This map is <a href='https://escapefromtarkov.fandom.com/wiki/Town' class='alert-link'>Town</a>
-        
-        <hr>
-        
-        There are no events on this map.`)"
-        >
-        <area target="" alt="Suburbs" title="Suburbs" href="#suburbs" coords="1012,276,1169,343" shape="rect"
-        onCLick="displayNotifications('top-right-banner', 'info', 
-        `This map is <a href='https://escapefromtarkov.fandom.com/wiki/Suburbs' class='alert-link'>Suburbs</a>
-        
-        <hr>
-        
-        There are no events on this map.`)"
-        >
-        <area target="" alt="Reserve" title="Reserve" href="#reserve" coords="583,657,746,710" shape="rect"
-        onCLick="displayNotifications('top-right-banner', 'info', 
-        `This map is <a href='https://escapefromtarkov.fandom.com/wiki/Reserve' class='alert-link'>Reserve</a>
-        
-        <hr>
-        
-        There are no events on this map.`)"
-        >
-        <area target="" alt="Lighthouse" title="Lighthouse" href="#lighthouse" coords="555,804,773,861" shape="rect"
-        onCLick="displayNotifications('top-right-banner', 'info', 
-        `This map is <a href='https://escapefromtarkov.fandom.com/wiki/Lighthouse' class='alert-link'>Lighthouse</a>
-        
-        <hr>
-        
-        There are no events on this map.`)"
-        >
-        <area target="" alt="Shoreline" title="Shoreline" href="#shoreline" coords="691,924,879,973" shape="rect"
-        onCLick="displayNotifications('top-right-banner', 'info', 
-        `This map is <a href='https://escapefromtarkov.fandom.com/wiki/Shoreline' class='alert-link'>Shoreline</a>
-        
-        <hr>
-        
-        There are no events on this map.`)"
-        >
-        <area target="" alt="Terminal" title="Terminal" href="#terminal" coords="906,888,1077,967" shape="rect"
-        onCLick="displayNotifications('top-right-banner', 'info', 
-        `This map is <a href='https://escapefromtarkov.fandom.com/wiki/Terminal' class='alert-link'>Terminal</a>
-        
-        <hr>
-        
-        There are no events on this map.`)"
-        >
-    </map>
-
-
-
-    <!-- Potentially a map, with events/goontracker -->
-    <!-- <img src="assets/tarkovmap_adobe_express.svg" alt="" class="w-100"> -->
-
-    <!-- Content -->
-    <div class="container-fluid">
-
-        <div class="row">
-
-            <div class="col-12" id="bsg-youtube">
-                <div class="bg-header rounded p-3 mb-2 mt-4">
-                    <h1 class="link-h1">
-                        <a href="https://www.youtube.com/@Battlestategames/featured"
-                            class="icon-link icon-link-hover text-decoration-none  link-h1">
-                            <i class="bi-youtube"></i>
-                            BSG YouTube
-                        </a>
-                        <a class="float-end float-md-none ps-md-2 my-auto link-h1" href="#bsg-youtube"
-                            onclick="document.getElementById('youtubeSection').classList.toggle('hide');"><i class="bi bi-arrow-down"></i></a>
-                    </h1>
-                </div>
-
-                <!-- <div class="bg-header rounded p-3 mb-2 mt-4">
-                    <a class="link-h1 text-decoration-none" href="#bsg-youtube" onclick="
-                                        document.getElementsByClassName('youtubeSection')[0].classList.toggle('hide'); 
-                                        document.getElementById('caret').classList.toggle('bi-caret-down'); 
-                                        document.getElementById('caret').classList.toggle('bi-caret-down-fill');
-                                        ">
-                        <h1 class="link-h1">
-                            <i class="bi-youtube"></i>
-                            BSG YouTube
-                            <i id="caret" class="btn btn-light float-end float-md-none bi bi-caret-down"></i>
-                        </h1>
-                    </a>
-                </div> -->
-            
-                <!-- Column -->
-            
-                <div id="youtubeSection" class="p-5">
-                    <div class="ratio ratio-16x9">
-                        <embed id="video0" src="https://youtube.com/embed/j-Jx66R-0s8" frameborder="0" allowfullscreen></embed>
-                    </div>
-            
-                    <div class="row">
-            
-                        <div class="col-md-4 p-md-5 py-2">
-                            <a id="video1link" href="https://youtube.com/watch?v=fewBii6NV1g" class="">
-                                <img id="video1" src="https://i.ytimg.com/vi/fewBii6NV1g/mqdefault.jpg" alt=""
-                                    class="w-100 img-fluid rounded mx-auto d-block">
-            
-                            </a>
-                        </div>
-                        <div class="col-md-4 p-md-5 py-2">
-                            <a id="video2link" href="https://youtube.com/watch?v=YWfYmOf7NGQ">
-                                <img id="video2" src="https://i.ytimg.com/vi/YWfYmOf7NGQ/maxresdefault.jpg" alt=""
-                                    class="w-100 img-fluid rounded mx-auto d-block">
-                            </a>
-                        </div>
-                        <div class="col-md-4 p-md-5 py-2">
-                            <a id="video3link" href="https://www.youtube.com/watch?v=BgIgKcqPd4k">
-                                <img id="video3" src="http://placekitten.com/1920/1080" alt=""
-                                    class="w-100 img-fluid rounded mx-auto d-block">
-                            </a>
-                        </div>
-            
-                    </div>
-                </div>
-            
-            </div>
-            
-            <!--  -->
-
-            <div class="col" id="tarkovcommunity">
-                <div class="bg-header rounded p-3 mb-2 mt-4">
-                    <a href="https://twitter.com/tarkovcommunity" class="icon-link icon-link-hover text-decoration-none link-h1">
-                        <h1 class="">
-                            <i class="bi-twitter"></i>
-                            @tarkovcommunity
-                        </h1>
-                    </a>
-                </div>
-                <a class="twitter-timeline" data-height="500" data-theme="dark"
-                    href="https://twitter.com/tarkovcommunity?ref_src=twsrc%5Etfw">Tweets by tarkovcommunity</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-
-            <!--  -->
-        
-        </div>
-
-        <!-- / -->
-
-        <div class="row">
-
-            <div class="col-12 col-md-6" id="bsg-twitter">
-                <div class="bg-header rounded p-3 mb-2 mt-4">
-                    <a href="https://twitter.com/bstategames" class="icon-link icon-link-hover text-decoration-none link-h1">
-                        <h1 class="">
-                            <i class="bi-twitter"></i>
-                            @bstategames
-                        </h1>
-                    </a>
-                </div>
-                
-                <a class="twitter-timeline" data-height="500" data-theme="dark"
-                    href="https://twitter.com/bstategames?ref_src=twsrc%5Etfw">Tweets by bstategames</a>
-                <script defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-
-            <div class="col-12 col-md-6" id="bsg-tarkov">
-                <div class="bg-header rounded p-3 mb-2 mt-4">
-                    <a href="https://twitter.com/tarkov" class="icon-link icon-link-hover text-decoration-none link-h1">
-                        <h1 class="">
-                            <i class="bi-twitter"></i>
-                            @tarkov
-                        </h1>
-                    </a>
-                </div>
-                
-                <a class="twitter-timeline" data-height="500" data-theme="dark"
-                    href="https://twitter.com/tarkov?ref_src=twsrc%5Etfw">Tweets by bstategames</a>
-                <script defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-
-        </div>
-        <!-- / -->
-    </div>
+   
 
     <script type="module" src="js/main.js"></script>
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="js/api-key.js"></script>
     <script src="js/curl-request.js"></script>
-    <script src="js/notifications.js"></script>
+    <script src="js/tarkov.js"></script>
+    <script src="js/helpers.js"></script>
     <script src="js/youtube-api.js"></script>
 
     <!-- using `script` -->
@@ -281,8 +124,6 @@
     
     <script type="text/javascript">
         getVideos(5);
-
-        ImageMap('img[usemap]', 200);
-    </script>
+    </script> 
 </body>
 </html>

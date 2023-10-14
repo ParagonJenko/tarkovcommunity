@@ -29,6 +29,10 @@ $enable-gradients: true;
 $enable-shadows: true;
 
 $offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+.offcanvas {
+    
+    color: #000;
+}
 
 // Customize some defaults
 $body-color: #333;
@@ -52,7 +56,7 @@ $success: #7952b3;
 // @import "bootstrap/scss/tables";
 // @import "bootstrap/scss/forms";
 @import "bootstrap/scss/buttons";
-// @import "bootstrap/scss/transitions";
+@import "bootstrap/scss/transitions";
 // @import "bootstrap/scss/dropdown";
 // @import "bootstrap/scss/button-group";
 // @import "bootstrap/scss/nav";
@@ -61,7 +65,7 @@ $success: #7952b3;
 // @import "bootstrap/scss/breadcrumb";
 // @import "bootstrap/scss/accordion";
 // @import "bootstrap/scss/pagination";
-// @import "bootstrap/scss/badge";
+@import "bootstrap/scss/badge";
 @import "bootstrap/scss/alert";
 // @import "bootstrap/scss/progress";
 // @import "bootstrap/scss/list-group";
@@ -72,7 +76,7 @@ $success: #7952b3;
 // @import "bootstrap/scss/popover";
 // @import "bootstrap/scss/carousel";
 // @import "bootstrap/scss/spinners";
-// @import "bootstrap/scss/offcanvas"; // Requires transitions
+@import "bootstrap/scss/offcanvas"; // Requires transitions
 // @import "bootstrap/scss/placeholders";
 
 // Helpers
@@ -80,22 +84,16 @@ $success: #7952b3;
 
 // Utilities
 @import "bootstrap/scss/utilities/api";
-//
+
 // Custom styles
-//
 
-@import "_icon-list";
 @import "_colors";
-@import "_defaults.scss";
 
-.bg-header {
-    background-color: #707b7c;
-}
+@import "_defaults";
 
-.link-h1, .link-h1 i {
-    color: #FFC300;
-}
+@import "_tarkov-background";
 
-.hide {
-    display: none;
-}
+@import "_mapsoverride";
+
+// Log color keys
+@debug $theme-colors;
