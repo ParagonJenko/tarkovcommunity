@@ -23,90 +23,86 @@
 
 
  -->
+
 <body class="">
 
     <!-- Nav -->
-    <nav class="d-flex flex-md-row flex-column justify-content-md-evenly p-3">
-        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas" 
-        onclick="updateOffCanvas('Factory')">Factory</a>
-        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas"
-        onclick="updateOffCanvas('Woods')">Woods</a>
-        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas"
-        onclick="updateOffCanvas('Customs')">Customs</a>
-        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas"
-        onclick="updateOffCanvas('Interchange')">Interchange</a>
-        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas"
-        onclick="updateOffCanvas('Reserve')">Reserve</a>
-        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas"
-        onclick="updateOffCanvas('Shoreline')">Shoreline</a>
-        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas"
-        onclick="updateOffCanvas('The Lab')">The Lab</a>
-        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas"
-        onclick="updateOffCanvas('Lighthouse')">Lighthouse</a>
-        <a class="btn btn-secondary disabled flex-shrink-1 m-2"
-        onclick="updateOffCanvas('Suburbs')">Suburbs</a>
-        <a class="btn btn-secondary disabled flex-shrink-1 m-2"
-        onclick="updateOffCanvas('Town')">Town</a>
-        <a class="btn btn-secondary disabled flex-shrink-1 m-2"
-        onclick="updateOffCanvas('Terminal')">Terminal</a>
+    <nav class="d-flex flex-lg-row flex-column justify-content-md-evenly p-3">
+        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button"
+            aria-controls="offcanvas" onclick="updateOffCanvas('Factory')">Factory</a>
+        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button"
+            aria-controls="offcanvas" onclick="updateOffCanvas('Woods')">Woods</a>
+        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button"
+            aria-controls="offcanvas" onclick="updateOffCanvas('Customs')">Customs</a>
+        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button"
+            aria-controls="offcanvas" onclick="updateOffCanvas('Interchange')">Interchange</a>
+        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button"
+            aria-controls="offcanvas" onclick="updateOffCanvas('Reserve')">Reserve</a>
+        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button"
+            aria-controls="offcanvas" onclick="updateOffCanvas('Shoreline')">Shoreline</a>
+        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button"
+            aria-controls="offcanvas" onclick="updateOffCanvas('The Lab')">The Lab</a>
+        <a class="btn btn-info flex-fill m-2" data-bs-toggle="offcanvas" href="#offcanvas" role="button"
+            aria-controls="offcanvas" onclick="updateOffCanvas('Lighthouse')">Lighthouse</a>
+        <a class="btn btn-secondary disabled flex-shrink-1 m-2" onclick="updateOffCanvas('Suburbs')">Suburbs</a>
+        <a class="btn btn-secondary disabled flex-shrink-1 m-2" onclick="updateOffCanvas('Town')">Town</a>
+        <a class="btn btn-secondary disabled flex-shrink-1 m-2" onclick="updateOffCanvas('Terminal')">Terminal</a>
     </nav>
     <!-- / Nav -->
 
 
     <!--  -->
-    <div class="offcanvas offcanvas-end text-bg-dark" data-bs-scroll="true" tabindex="-1"
-        id="offcanvas" aria-labelledby="offcanvasLabel">
+    <div class="offcanvas offcanvas-end text-bg-dark" data-bs-scroll="true" tabindex="-1" id="offcanvas"
+        aria-labelledby="offcanvasLabel">
         <div class="offcanvas-header">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             <h3 class="offcanvas-title" id="offcanvasLabel">TITLE </h3>
         </div>
         <div class="offcanvas-body">
-            
+
         </div>
     </div>
     <!--  -->
 
-   
 
-    <div class="d-flex d-flex justify-content-between">
-        <!-- YouTube -->
-        <div id="youtubeSection" class="p-3 flex-fill w-75">
-        
-            <div class="ratio ratio-16x9">
-                <embed id="video0" src="https://youtube.com/embed/j-Jx66R-0s8" frameborder="0" allowfullscreen></embed>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-12 col-md-8 col-lg-10">
+                <div class="ratio ratio-16x9">
+                    <embed id="video0" src="https://youtube.com/embed/j-Jx66R-0s8" frameborder="0"
+                        allowfullscreen></embed>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 p-1 p-lg-5">
+                        <a id="video1link" href="https://youtube.com/watch?v=fewBii6NV1g" class="">
+                            <img id="video1" src="https://i.ytimg.com/vi/fewBii6NV1g/mqdefault.jpg" alt=""
+                                class="w-100 img-fluid rounded mx-auto d-block">
+                        </a>
+                    </div>
+                    <div class="col-md-4 p-1 p-lg-5">
+                        <a id="video2link" href="https://youtube.com/watch?v=YWfYmOf7NGQ">
+                            <img id="video2" src="https://i.ytimg.com/vi/YWfYmOf7NGQ/maxresdefault.jpg" alt=""
+                                class="w-100 img-fluid rounded mx-auto d-block">
+                        </a>
+                    </div>
+                    <div class="col-md-4 p-1 p-lg-5">
+                        <a id="video3link" href="https://www.youtube.com/watch?v=BgIgKcqPd4k">
+                            <img id="video3" src="https://placekitten.com/1920/1080" alt=""
+                                class="w-100 img-fluid rounded mx-auto d-block">
+                        </a>
+                    </div>
+                </div>
             </div>
-        
-            <div class="row">
-                <div class="col-md-4 p-md-5 py-2">
-                    <a id="video1link" href="https://youtube.com/watch?v=fewBii6NV1g" class="">
-                        <img id="video1" src="https://i.ytimg.com/vi/fewBii6NV1g/mqdefault.jpg" alt=""
-                            class="w-100 img-fluid rounded mx-auto d-block">
-                    </a>
-                </div>
-                <div class="col-md-4 p-md-5 py-2">
-                    <a id="video2link" href="https://youtube.com/watch?v=YWfYmOf7NGQ">
-                        <img id="video2" src="https://i.ytimg.com/vi/YWfYmOf7NGQ/maxresdefault.jpg" alt=""
-                            class="w-100 img-fluid rounded mx-auto d-block">
-                    </a>
-                </div>
-                <div class="col-md-4 p-md-5 py-2">
-                    <a id="video3link" href="https://www.youtube.com/watch?v=BgIgKcqPd4k">
-                        <img id="video3" src="https://placekitten.com/1920/1080" alt=""
-                            class="w-100 img-fluid rounded mx-auto d-block">
-                    </a>
-                </div>
+            <div class="col">
+                <h3>Handy Links</h3>
+                <a href="https://mapgenie.io/tarkov" class="btn btn-outline-info">MapGenie - Tarkov Maps</a>
             </div>
+
         </div>
-        <!-- / Youtube -->
-
-        <div class="vr m-3"></div>
-
-        <a href="https://mapgenie.io/tarkov" class="btn btn-outline-info flex-shrink-1 align-self-center">MapGenie - Tarkov Maps</a>
-        
-
     </div>
-
-   
 
     <script type="module" src="js/main.js"></script>
     <script src="https://apis.google.com/js/api.js"></script>
@@ -119,11 +115,12 @@
     <!-- using `script` -->
     <script src="https://unpkg.com/image-map/dist/image-map.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-            crossorigin="anonymous"></script>
-    
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
     <script type="text/javascript">
         getVideos(5);
-    </script> 
+    </script>
 </body>
+
 </html>
