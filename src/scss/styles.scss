@@ -1,0 +1,37 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+@import url('https://fonts.cdnfonts.com/css/bender');
+
+body {
+    font-family: 'Bender', sans-serif;
+    position: relative;
+    /* Set your gradient background here */
+    // background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
+    background: linear-gradient(to right, #3c3b3f, #605c3c);
+    // background-color: #3c3b3f;
+}
+
+body::before {
+    content: "";
+    background-image: url('../assets/pattern.png');
+    background-repeat: repeat;
+    // background-size: contain;
+    /* or any other size you prefer */
+    background-position: center center;
+    /* or any other position */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    /* This places the pseudo-element below the content */
+}
+
+#videoRow > div > a > * {
+    border: 2px solid #fff;
+}
+
+.text-white {
+    color: #fff;
+}

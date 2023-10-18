@@ -1,9 +1,0 @@
-$tarkov-colors: (
-    "tarkov1": #8D999F,
-    "tarkov2": #DBE6E8,
-    "tarkov3": #918D83,
-    "tarkov4": #333228,
-    "tarkov5": #A2CCD7
-);
-// Merge the maps
-$theme-colors: map-merge($theme-colors, $tarkov-colors);
