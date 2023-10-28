@@ -37,10 +37,6 @@ body::before {
     color: #fff;
 }
 
-.map-down {
-    color: red;
-}
-
 .twitch-background {
     background-image: radial-gradient(circle, rgba(100, 65, 165, 0.7), rgba(100, 65, 165, 0.9), rgba(100, 65, 165, 0.7), rgba(100, 65, 165, 0.7), rgba(100, 65, 165, 0.7));
 
@@ -59,6 +55,25 @@ body::before {
     background-image: radial-gradient(circle, rgba(255, 0, 0, 0.3), rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.3), rgba(255, 0, 0, 0.3), rgba(255, 0, 0, 0.3));
 }
 
+.link-card {
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+}
+
 a {
     text-decoration: none;
+}
+
+/*
+#9CAC7E,
+#8BAE88,
+#DEDFDF,
+#81BBE1,
+#68A3C9,
+#C19665
+*/
+
+.img-border {
+    border-style: solid;
+    border-color: #C19665;
 }
