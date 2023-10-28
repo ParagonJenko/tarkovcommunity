@@ -21,3 +21,4 @@ areas.forEach(area => {
         putCanvasTemplate(areaTitle); // Call the function with the area's title
     });
 });
+

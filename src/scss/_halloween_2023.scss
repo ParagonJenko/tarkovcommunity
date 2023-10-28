@@ -1,0 +1,21 @@
+$halloween-color1: #220901;
+$halloween-color2: #621708;
+$halloween-color3: #941b0c;
+$halloween-color4: #bc3908;
+$halloween-color5: #f6aa1c;
+$halloween-color6: #cc5803;
+$halloween-color7: #f7934c;
+
+$img-border-color: $halloween-color3;
+$link-card-1: $halloween-color1;
+$link-card-2: $halloween-color4;
+
+$link-card-text: $halloween-color5;
+
+$background-gradient-1: $halloween-color6;
+$background-gradient-2: $halloween-color7;
+
+.alert-halloween {
+    background-color: rgba($halloween-color6, 0.75);
+    color: #fff;
+}

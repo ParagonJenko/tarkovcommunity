@@ -3,12 +3,38 @@
 @import url('https://fonts.cdnfonts.com/css/bender');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 
+$color1: #9bbe5a;
+
+$background-gradient-1: #3c3b3f;
+$background-gradient-2: #605c3c;
+
+$twitch-rgba-1: rgba(100, 65, 165, 0.7);
+$twitch-rgba-2: rgba(100, 65, 165, 0.9);
+$twitch-rgba-3: rgba(100, 65, 165, 0.7);
+$twitch-rgba-4: rgba(100, 65, 165, 0.7);
+$twitch-rgba-5: rgba(100, 65, 165, 0.7);
+
+$youtube-rgba-1: rgba(255, 0, 0, 0.3);
+$youtube-rgba-2: rgba(255, 0, 0, 0.5);
+$youtube-rgba-3: rgba(255, 0, 0, 0.3);
+$youtube-rgba-4: rgba(255, 0, 0, 0.3);
+$youtube-rgba-5: rgba(255, 0, 0, 0.3);
+
+$link-card-1: #8BC6EC;
+$link-card-2: #9599E2;
+$link-card-text: #000;
+
+$img-border-color: #C19665;
+
+@import "./halloween_2023";
+// @import "./autumn_2024";
+
 body {
     font-family: 'Bender', sans-serif;
     position: relative;
     /* Set your gradient background here */
     // background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
-    background: linear-gradient(to right, #3c3b3f, #605c3c);
+    background: linear-gradient(to right, $background-gradient-1, $background-gradient-2);
     // background-color: #3c3b3f;
 }
 
@@ -38,26 +64,17 @@ body::before {
 }
 
 .twitch-background {
-    background-image: radial-gradient(circle, rgba(100, 65, 165, 0.7), rgba(100, 65, 165, 0.9), rgba(100, 65, 165, 0.7), rgba(100, 65, 165, 0.7), rgba(100, 65, 165, 0.7));
-
-    h4 {
-        color: #fff;
-            a {
-                color: #9bbe5a;
-            }
-        }
-    p {
-        color: grey;
-    }
+    background-image: radial-gradient(circle, $twitch-rgba-1, $twitch-rgba-2, $twitch-rgba-3, $twitch-rgba-4, $twitch-rgba-5);
 }
 
 .youtube-background {
-    background-image: radial-gradient(circle, rgba(255, 0, 0, 0.3), rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.3), rgba(255, 0, 0, 0.3), rgba(255, 0, 0, 0.3));
+    background-image: radial-gradient(circle, $youtube-rgba-1, $youtube-rgba-2, $youtube-rgba-3, $youtube-rgba-4, $youtube-rgba-5);
 }
 
 .link-card {
-    background-color: #8BC6EC;
-    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    background-color: $link-card-1;
+    background-image: linear-gradient(135deg, $link-card-1 0%, $link-card-2 100%);
+    color: $link-card-text;
 }
 
 a {
@@ -75,5 +92,6 @@ a {
 
 .img-border {
     border-style: solid;
-    border-color: #C19665;
+    border-color: $img-border-color;
 }
+
