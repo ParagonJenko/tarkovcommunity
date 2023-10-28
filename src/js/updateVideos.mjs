@@ -4,7 +4,7 @@ import axios from 'axios';
 // Function to fetch the last 5 YouTube video URLs
 async function fetchYouTubeVideos() {
 
-  const apiKey = `AIzaSyACCq5EOx7RI7ee6DF0qXVMK2DI-C2MQ8g`; // Replace with your YouTube Data API key - this is publicly available in the console anyway.
+  const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY; // Replace with your YouTube Data API key - this is publicly available in the console anyway.
 
   if(typeof apiKey === "undefined"){
     console.log("Undefined");
