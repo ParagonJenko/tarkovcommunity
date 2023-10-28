@@ -21,7 +21,6 @@ axios.post('https://id.twitch.tv/oauth2/token', null, {
 })
   .then(response => {
     accessToken = response.data.access_token;
-    console.log('Access Token:', response.data.access_token);
   })
   .catch(error => {
     console.error('Error:', error);
