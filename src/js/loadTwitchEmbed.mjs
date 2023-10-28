@@ -11,6 +11,9 @@ const postData = {
   grant_type: grantType,
 };
 
+const channelList = ['bstategames', 'evasion_gg', 'HUNTPremier'];
+let currentChannelIndex = 0; // Initialize the index to 0
+
 // Gets the OAuth Access Token through the client credentials grant flow 
 // https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/#client-credentials-grant-flow
 axios.post('https://id.twitch.tv/oauth2/token', null, {
@@ -54,14 +57,25 @@ function checkChannelOnline(channel, player) {
         if (data.data.length > 0) {
             // The channel is online
             console.log("Channel is online");
-        } else {
-            // The channel is offline, switch to another channel
-            console.log("Channel is offline, switching to another channel");
-            const channelToPlay = "thatfriendlyguy"; // Set the channel to play here
             player.setChannel(channelToPlay);
+        } else {
+             // The channel is offline, switch to the next channel in the list
+            console.log("Channel is offline, switching to the next channel");
+            currentChannelIndex++;
+            if (currentChannelIndex < channelList.length) {
+                checkChannelOnline(channelList[currentChannelIndex], player)
+            } else {
+                console.log("All channels are offline.");
+                player.setChannel(channelList[0]);
+                // player.setChannel(channelList[currentChannelIndex - 1]); // Get the last array item as the final fallback
+            }
         }
     })
     .catch((error) => console.error(error));
 }
 
+// Start with the first channel in the list
+createTwitchPlayer(channelList[currentChannelIndex]);
+
 export { createTwitchPlayer }
+
