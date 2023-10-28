@@ -1,8 +1,7 @@
 import { updateHTMLWithVideos } from './updateVideos.mjs';
 import { putCanvasTemplate } from './showUI.mjs';
 import ImageMap from "image-map";
-
-// import { outputNav } from './updateNavs.mjs';
+import { createTwitchPlayer } from "./loadTwitchEmbed.mjs"
 
 // Import our custom CSS
 import '../scss/styles.scss'
@@ -22,3 +21,5 @@ areas.forEach(area => {
         putCanvasTemplate(areaTitle); // Call the function with the area's title
     });
 });
+
+createTwitchPlayer();

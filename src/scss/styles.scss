@@ -40,3 +40,25 @@ body::before {
 .map-down {
     color: red;
 }
+
+.twitch-background {
+    background-image: radial-gradient(circle, rgba(100, 65, 165, 0.7), rgba(100, 65, 165, 0.9), rgba(100, 65, 165, 0.7), rgba(100, 65, 165, 0.7), rgba(100, 65, 165, 0.7));
+
+    h4 {
+        color: #fff;
+            a {
+                color: #9bbe5a;
+            }
+        }
+    p {
+        color: grey;
+    }
+}
+
+.youtube-background {
+    background-image: radial-gradient(circle, rgba(255, 0, 0, 0.3), rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.3), rgba(255, 0, 0, 0.3), rgba(255, 0, 0, 0.3));
+}
+
+a {
+    text-decoration: none;
+}
