@@ -56,7 +56,7 @@ async function putCanvasTemplate(mapSelected, isInAPI = false) {
     offcanvasBody.innerHTML = `
      <div class="row text-center m-2">
 
-        <img id="mapImage" src="/${mapData.mapName}.png" alt="" class="w-100 img-fluid rounded mx-auto d-block my-2">
+        <img id="mapImage" src="./assets/maps/${mapData.mapName}.png" alt="" class="w-100 img-fluid rounded mx-auto d-block my-2">
 
         <div class="col-6">
             <span class="badge bg-info p-2">Players: ${mapData.mapPlayers}</span>
