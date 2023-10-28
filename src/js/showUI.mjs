@@ -1,5 +1,15 @@
 import { fetchSingleMapData } from "./fetchMapData.mjs";
 
+const offcanvasTitle = document.getElementById("offcanvasLabel");
+const offcanvasBody = document.getElementById("offcanvasBody"); 
+
+const myOffcanvas = document.getElementById('offcanvas')
+myOffcanvas.addEventListener('hidden.bs.offcanvas', event => {
+   offcanvasTitle.innerHTML = "";
+   offcanvasBody.innerHTML = `<div class="text-center"><div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div></div>`;
+})
+
+
 async function loadOffCanvasWithMap(mapSelected) {
 
     if(!mapSelected) {
@@ -42,8 +52,6 @@ async function loadOffCanvasWithMap(mapSelected) {
 async function putCanvasTemplate(mapSelected, isInAPI = false) {
 
     const mapData = await loadOffCanvasWithMap(mapSelected);
-    const offcanvasTitle = document.getElementById("offcanvasLabel");
-    const offcanvasBody = document.getElementById("offcanvasBody"); 
 
     if(isInAPI || mapData === false) {
         offcanvasTitle.textContent = mapSelected;
