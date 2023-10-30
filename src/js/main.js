@@ -2,7 +2,7 @@ import { updateHTMLWithVideos } from './updateVideos.mjs';
 import { putCanvasTemplate } from './showUI.mjs';
 import ImageMap from "image-map";
 import { createTwitchPlayer } from "./loadTwitchEmbed.mjs"
-import { displayAlert } from './alertDisplayer.mjs';
+import { getAlert } from './alerts/getAlerts.mjs';
 
 // Import our custom CSS
 import '../scss/styles.scss'
@@ -12,7 +12,7 @@ import * as bootstrap from 'bootstrap'
 ImageMap('img[usemap]');
 
 document.addEventListener("DOMContentLoaded", (event) => {
-  displayAlert("halloween");
+  // displayAlert("halloween");
 });
 
 // Get all the <area> elements in the image map
@@ -26,3 +26,5 @@ areas.forEach(area => {
         putCanvasTemplate(areaTitle); // Call the function with the area's title
     });
 });
+
+getAlert("terminal", "halloween");
