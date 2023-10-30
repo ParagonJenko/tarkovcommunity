@@ -43,7 +43,7 @@ function createTwitchPlayer(channel = "bstategames") {
 
 function checkChannelOnline(channel, player) {
     const apiUrl = `https://api.twitch.tv/helix/streams?user_login=${channel}`;
-
+    
     fetch(apiUrl, {
         method: "GET",
         headers: {

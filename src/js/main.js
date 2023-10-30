@@ -13,6 +13,8 @@ ImageMap('img[usemap]');
 
 document.addEventListener("DOMContentLoaded", (event) => {
     getAlert("terminal", "halloween");
+    // Call the function to update the HTML
+  updateHTMLWithVideos();
 });
 
 // Get all the <area> elements in the image map

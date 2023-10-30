@@ -46,10 +46,6 @@ async function updateHTMLWithVideos() {
   });
 }
 
-
-
 // Export any functions or values that need to be used in other modules
 export { updateHTMLWithVideos };
 
-// Call the function to update the HTML
-updateHTMLWithVideos();
