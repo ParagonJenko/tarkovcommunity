@@ -63,6 +63,12 @@ function displayTerminalAlert(event) {
 
     var fakeCloseDiv = document.createElement('div');
     fakeCloseDiv.className = 'fakeButtons fakeClose';
+    
+    // add a click event listener to the div
+    fakeMenuDiv.addEventListener('click', function() {
+        // newDiv.className = 'visually-hidden';
+        newDiv.remove();
+    });
 
     var fakeMinimizeDiv = document.createElement('div');
     fakeMinimizeDiv.className = 'fakeButtons fakeMinimize';
@@ -90,6 +96,7 @@ function displayTerminalAlert(event) {
     speed: 25,
     }).go();
 }
+
 
 
 async function displayBootstrapAlert(event){
