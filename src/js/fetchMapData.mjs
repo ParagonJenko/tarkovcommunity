@@ -79,6 +79,7 @@ async function fetchSingleMapData(map) {
         }
 
         const data = await response.json();
+
         return data; // Return the JSON data
     } catch (error) {
         console.error('Error:', error);

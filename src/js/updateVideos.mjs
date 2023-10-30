@@ -17,12 +17,17 @@ async function fetchYouTubeVideos() {
 
   try {
     // const response = await axios.get(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=5`);
-    const response = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=5&playlistId=${BSG_playlistId}&key=${apiKey}`);
+    const response = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=5&playlistId=${BSG_playlistId}&key=${apiKey}`);
+
+
+    
 
     const videos = response.data.items.map(item => ({
-      videoId: item.id.videoId,
+      videoId: item.snippet.resourceId.videoId,
       thumbnail: item.snippet.thumbnails.medium.url,
     }));
+
+    console.log(videos);
 
     return videos;
   } catch (error) {
@@ -38,6 +43,8 @@ async function updateHTMLWithVideos() {
   videos.forEach((video, index) => {
     const anchor = document.getElementById(`video${index + 1}link`);
     const img = document.getElementById(`video${index + 1}`);
+
+    console.log(video)
 
     if (anchor && img) {
       anchor.href = `https://youtube.com/watch?v=${video.videoId}`;

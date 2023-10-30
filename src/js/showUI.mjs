@@ -70,7 +70,7 @@ async function putCanvasTemplate(mapSelected, isInAPI = false) {
             <span class="badge bg-info p-2">Players: ${mapData.mapPlayers}</span>
         </div>
         <div class="col-6">
-            <span class="badge bg-info p-2">Duration: ${mapData.raidDuration}</span>
+            <span class="badge bg-info p-2">Duration: ${mapData.mapraidDuration} minutes</span>
         </div>
 
     </div>
@@ -81,7 +81,7 @@ async function putCanvasTemplate(mapSelected, isInAPI = false) {
         ${mapData.mapBosses} <!-- Join the boss spans into a single string -->
     </div>
 
-    <a href="${mapData.wiki}">See wiki here...</a>
+    <a href="${mapData.mapWiki}">See wiki here...</a>
     `
 }
 
