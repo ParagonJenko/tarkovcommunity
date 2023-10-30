@@ -7,10 +7,9 @@ const events = {
         eventUpdates: [ 
         '🔪 Increased Cultist spawn chances on Shoreline, Woods and Customs',
         '🎃 Jack-o-lantern tactical pumpkin helmet back in the game!',
-        '**NEW** Zyrachi on <b>all</b> maps',
-        '**NEW** Only <b>one extract per map</b>',
-        '**NEW** 100% spawn rate of Zyrachi',
-        '<a href="https://twitter.com/LogicaISoIution/status/1719058904951484846">🐦 Live tweeted by LogicalSolutions</a>'
+        '🔥 100% spawn rate of Zyrachi on all maps (except Factory and The Labs)',
+        '🥼 Tagilla is on Factory and The Lab',
+        '<a href="https://escapefromtarkov.fandom.com/wiki/Events">📣 **NEW** Boss event - KILL ZYRACHI</a>',
         ],
     },
     "christmas": {
@@ -29,6 +28,9 @@ const events = {
         ]
     }
 };
+
+
+
 
 async function getAlert(alertType = "terminal", event = "none") {
 
