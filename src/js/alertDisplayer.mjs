@@ -12,7 +12,7 @@ Idea - make it like a console?
 
 const events = {
     "halloween": {
-        stlyingClass: "alert-halloween",
+        stylingClass: "alert-halloween",
         title: "Halloween event! 👻",
         eventUpdates: [ 
         '🔪 Increased Cultist spawn chances on Shoreline, Woods and Customs',
@@ -24,7 +24,7 @@ const events = {
         ],
     },
     "christmas": {
-        stlyingClass: "alert-christmas",
+        stylingClass: "alert-christmas",
         title: "Test",
         eventUpdates: [
             'Testing Chrismtas',
@@ -37,7 +37,7 @@ function displayAlert(event){
     
     // Create a new div element
     const alertDiv = document.createElement('div');
-    alertDiv.classList.add('alert', 'alert-info', events[event].stlyingClass, 'alert-dismissible', 'fade', 'show');
+    alertDiv.classList.add('alert', 'alert-info', events[event].stylingClass, 'alert-dismissible', 'fade', 'show');
     alertDiv.setAttribute('role', 'alert');
 
     // Create the h3 element for the title
