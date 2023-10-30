@@ -20,17 +20,24 @@ const events = {
             'Testing Chrismtas',
             'Merry Christmas',
         ],
-    }   
+    },
+    "none": {
+        stylingClass: "alert-danger",
+        title: "This shouldn't be displayed",
+        eventUpdates: [
+            "This shouldn't be displayed - please contact owner"
+        ]
+    }
 };
 
 async function getAlert(alertType = "terminal", event = "none") {
+
+
     switch(alertType){
         case "terminal":
-            console.log(alertType);
             displayTerminalAlert(event);
             break;
         case "bootstrap":
-            console.log(alertType);
             displayBootstrapAlert(event);
             break;
         default:
