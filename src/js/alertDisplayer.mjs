@@ -73,7 +73,6 @@ function displayAlert(event){
     // Append the alertDiv to a container element in your HTML, for example:
     const container = document.getElementById('alertLocation');
     container.appendChild(alertDiv);
-    console.log(alertDiv);
 }
 
 export { displayAlert }
