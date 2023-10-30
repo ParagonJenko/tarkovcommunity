@@ -23,9 +23,6 @@ async function fetchYouTubeVideos() {
       videoId: item.snippet.resourceId.videoId,
       thumbnail: item.snippet.thumbnails.medium.url,
     }));
-
-    console.log(videos);
-
     return videos;
   } catch (error) {
     console.error('Error fetching YouTube videos:', error);
@@ -41,8 +38,6 @@ async function updateHTMLWithVideos() {
 
     const anchor = document.getElementById(`video${index+1}link`);
     const img = document.getElementById(`video${index+1}`);
-
-    console.log(video)
 
     if (anchor && img) {
       anchor.href = `https://youtube.com/watch?v=${video.videoId}`;
