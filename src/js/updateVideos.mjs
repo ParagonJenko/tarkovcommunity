@@ -19,9 +19,6 @@ async function fetchYouTubeVideos() {
     // const response = await axios.get(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=5`);
     const response = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=5&playlistId=${BSG_playlistId}&key=${apiKey}`);
 
-
-    
-
     const videos = response.data.items.map(item => ({
       videoId: item.snippet.resourceId.videoId,
       thumbnail: item.snippet.thumbnails.medium.url,
@@ -41,8 +38,9 @@ async function updateHTMLWithVideos() {
   const videos = await fetchYouTubeVideos();
 
   videos.forEach((video, index) => {
-    const anchor = document.getElementById(`video${index + 1}link`);
-    const img = document.getElementById(`video${index + 1}`);
+
+    const anchor = document.getElementById(`video${index+1}link`);
+    const img = document.getElementById(`video${index+1}`);
 
     console.log(video)
 
