@@ -11,6 +11,10 @@ import * as bootstrap from 'bootstrap'
 
 ImageMap('img[usemap]');
 
+document.addEventListener("DOMContentLoaded", (event) => {
+  displayAlert();
+});
+
 // Get all the <area> elements in the image map
 const areas = document.querySelectorAll('area');
 
@@ -23,4 +27,3 @@ areas.forEach(area => {
     });
 });
 
-displayAlert();
