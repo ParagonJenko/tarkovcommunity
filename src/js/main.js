@@ -2,6 +2,7 @@ import { updateHTMLWithVideos } from './updateVideos.mjs';
 import { putCanvasTemplate } from './showUI.mjs';
 import ImageMap from "image-map";
 import { createTwitchPlayer } from "./loadTwitchEmbed.mjs"
+import { displayAlert } from './alertDisplayer.mjs';
 
 // Import our custom CSS
 import '../scss/styles.scss'
@@ -22,3 +23,4 @@ areas.forEach(area => {
     });
 });
 
+displayAlert();
