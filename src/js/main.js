@@ -12,7 +12,7 @@ import * as bootstrap from 'bootstrap'
 ImageMap('img[usemap]');
 
 document.addEventListener("DOMContentLoaded", (event) => {
-  displayAlert();
+  displayAlert("halloween");
 });
 
 // Get all the <area> elements in the image map
@@ -26,4 +26,3 @@ areas.forEach(area => {
         putCanvasTemplate(areaTitle); // Call the function with the area's title
     });
 });
-

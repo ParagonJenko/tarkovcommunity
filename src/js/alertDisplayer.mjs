@@ -5,19 +5,44 @@ Schedule alerts in code for a certain UTC datetime
 
 https://getbootstrap.com/docs/5.3/components/alerts/#methods
 
+Idea - make it like a console? 
+
 */
 
 
-function displayAlert(){
+const events = {
+    "halloween": {
+        stlyingClass: "alert-halloween",
+        title: "Halloween event! 👻",
+        eventUpdates: [ 
+        '🔪 Increased Cultist spawn chances on Shoreline, Woods and Customs',
+        '🎃 Jack-o-lantern tactical pumpkin helmet back in the game!',
+        '**NEW** Zyrachi on <b>all</b> maps',
+        '**NEW** Only <b>one extract per map</b>',
+        '**NEW** 100% spawn rate',
+        '<a href="https://twitter.com/LogicaISoIution/status/1719058904951484846">🐦 Live tweeted by LogicalSolutions</a>'
+        ],
+    },
+    "christmas": {
+        stlyingClass: "alert-christmas",
+        title: "Test",
+        eventUpdates: [
+            'Testing Chrismtas',
+            'Merry Christmas',
+        ],
+    }   
+};
+
+function displayAlert(event){
     
     // Create a new div element
     const alertDiv = document.createElement('div');
-    alertDiv.classList.add('alert', 'alert-info', 'alert-halloween', 'alert-dismissible', 'fade', 'show');
+    alertDiv.classList.add('alert', 'alert-info', events[event].stlyingClass, 'alert-dismissible', 'fade', 'show');
     alertDiv.setAttribute('role', 'alert');
 
     // Create the h3 element for the title
     const title = document.createElement('h3');
-    title.textContent = 'Halloween event! 👻';
+    title.textContent = events[event].title;
 
     // Create the button element for closing the alert
     const closeButton = document.createElement('button');
@@ -32,18 +57,8 @@ function displayAlert(){
     // Create a ul element for the list
     const ul = document.createElement('ul');
 
-    // Create an array of list items
-    const listItems = [
-        '🔪 Increased Cultist spawn chances on Shoreline, Woods and Customs',
-        '🎃 Jack-o-lantern tactical pumpkin helmet back in the game!',
-        '**NEW** Zyrachi on <b>all</b> maps',
-        '**NEW** Only <b>one extract per map</b>',
-        '**NEW** 100% spawn rate',
-        '<a href="https://twitter.com/LogicaISoIution/status/1719058904951484846">🐦 Live tweeted by LogicalSolutions</a>'
-    ];
-
     // Create and append li elements for each list item
-    listItems.forEach(itemText => {
+    events[event].eventUpdates.forEach(itemText => {
         const li = document.createElement('li');
         li.innerHTML = itemText;
         ul.appendChild(li);
@@ -56,11 +71,10 @@ function displayAlert(){
     alertDiv.appendChild(ul);
 
     // Append the alertDiv to a container element in your HTML, for example:
-    const container = document.getElementById('alertLocation'); // Replace with your actual container ID
+    const container = document.getElementById('alertLocation');
     container.appendChild(alertDiv);
-
+    console.log(alertDiv);
 }
 
-// displayAlert();
-
 export { displayAlert }
+
