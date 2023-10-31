@@ -16,16 +16,18 @@ let currentChannelIndex = 0; // Initialize the index to 0
 
 // Gets the OAuth Access Token through the client credentials grant flow 
 // https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/#client-credentials-grant-flow
-axios.post('https://id.twitch.tv/oauth2/token', null, {
-  params: postData,
-})
-  .then(response => {
-    accessToken = response.data.access_token;
+// Function to get the OAuth access token
+function getAccessToken() {
+  return axios.post('https://id.twitch.tv/oauth2/token', null, {
+    params: postData,
   })
-  .catch(error => {
-    console.error('Error:', error);
-  });
-
+    .then(response => {
+      accessToken = response.data.access_token;
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
 function createTwitchPlayer(channel = "bstategames") {
     const embed = new Twitch.Embed("twitch-embed", {
             channel: channel,
@@ -73,8 +75,13 @@ function checkChannelOnline(channel, player) {
     .catch((error) => console.error(error));
 }
 
-// Start with the first channel in the list
-createTwitchPlayer(channelList[currentChannelIndex]);
+// Initialize the application
+function initializeApp() {
+  getAccessToken()
+    .then(() => {
+      createTwitchPlayer(channelList[currentChannelIndex]);
+    });
+}
 
-export { createTwitchPlayer }
-
+// Start the application
+initializeApp();
