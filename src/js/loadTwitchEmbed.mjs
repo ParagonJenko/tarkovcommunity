@@ -76,7 +76,7 @@ function checkChannelOnline(channel, player) {
 }
 
 // Initialize the application
-function initializeApp() {
+function initializeTwitchEmbed() {
   getAccessToken()
     .then(() => {
       createTwitchPlayer(channelList[currentChannelIndex]);
@@ -84,4 +84,4 @@ function initializeApp() {
 }
 
 // Start the application
-initializeApp();
+export { initializeTwitchEmbed }

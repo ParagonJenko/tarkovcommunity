@@ -1,7 +1,7 @@
 import { updateHTMLWithVideos } from './updateVideos.mjs';
 import { putCanvasTemplate } from './showUI.mjs';
 import ImageMap from "image-map";
-import { createTwitchPlayer } from "./loadTwitchEmbed.mjs"
+import { initializeTwitchEmbed } from "./loadTwitchEmbed.mjs";
 import { getAlert } from './alerts/getAlerts.mjs';
 
 // Import our custom CSS
@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     getAlert("terminal", "halloween");
     // Call the function to update the HTML
   updateHTMLWithVideos();
+  initializeTwitchEmbed();
 });
 
 // Get all the <area> elements in the image map
