@@ -29,9 +29,6 @@ const events = {
     }
 };
 
-
-
-
 async function getAlert(alertType = "terminal", event = "none") {
 
 
