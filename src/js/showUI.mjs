@@ -1,4 +1,4 @@
-import { fetchSingleMapData } from "./fetchMapData.mjs";
+import { fetchSingleMapData } from "./apis/tarkovDev.mjs";
 
 const offcanvasTitle = document.getElementById("offcanvasLabel");
 const offcanvasBody = document.getElementById("offcanvasBody"); 
@@ -10,7 +10,7 @@ myOffcanvas.addEventListener('hidden.bs.offcanvas', event => {
 })
 
 
-async function loadOffCanvasWithMap(mapSelected) {
+async function parseSingleMapData(mapSelected) {
 
     if(!mapSelected) {
         alert("No map selected");
@@ -51,7 +51,7 @@ async function loadOffCanvasWithMap(mapSelected) {
 
 async function putCanvasTemplate(mapSelected, isInAPI = false) {
 
-    const mapData = await loadOffCanvasWithMap(mapSelected);
+    const mapData = await parseSingleMapData(mapSelected);
 
     if(isInAPI || mapData === false) {
         offcanvasTitle.textContent = mapSelected;

@@ -1,7 +1,7 @@
-import { updateHTMLWithVideos } from './updateVideos.mjs';
+import { updateHTMLWithVideos } from './apis/youtube.mjs';
 import { putCanvasTemplate } from './showUI.mjs';
 import ImageMap from "image-map";
-import { initializeTwitchEmbed } from "./loadTwitchEmbed.mjs";
+import { initializeTwitchEmbed } from "./apis/twitch.mjs";
 import { getAlert } from './alerts/getAlerts.mjs';
 
 // Import our custom CSS
