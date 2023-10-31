@@ -1,0 +1,19 @@
+$christmas-color1: #165b33;
+$christmas-color2: #146b3a;
+$christmas-color3: #f8b229;
+$christmas-color4: #ea4630;
+$christmas-color5: #bb2528;
+
+$img-border-color: $christmas-color3;
+$link-card-1: $christmas-color3;
+$link-card-2: $christmas-color4;
+
+$link-card-text: $christmas-color5;
+
+$background-gradient-1: $christmas-color1;
+$background-gradient-2: $christmas-color3;
+
+.alert-christmas {
+    background-color: rgba($christmas-color3, 0.75);
+    color: #fff;
+}
