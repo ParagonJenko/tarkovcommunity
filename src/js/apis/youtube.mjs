@@ -34,8 +34,7 @@ async function fetchYouTubeVideos() {
 async function updateHTMLWithVideos() {
   const videos = await fetchYouTubeVideos();
 
-  videos.forEach((video, index) => {
-
+  videos.slice(1).forEach((video, index) => {
     const anchor = document.getElementById(`video${index+1}link`);
     const img = document.getElementById(`video${index+1}`);
 
