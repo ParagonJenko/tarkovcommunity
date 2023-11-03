@@ -12,7 +12,7 @@ import * as bootstrap from 'bootstrap'
 ImageMap('img[usemap]');
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    getAlert("terminal", "halloween");
+    // getAlert("terminal", "halloween");
     // Call the function to update the HTML
   updateHTMLWithVideos();
   initializeTwitchEmbed();
